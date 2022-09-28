@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+  
+}
+
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+input {
+  
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Fake image */
+.fakepost {
+  background-color: rgba(224, 120, 120, 0.705);
+  width: 100%;
+  padding: 20px;
+}
+
+
+.fakeimg {
+  background-color: #ddd;
+  width: 100%;
+  padding: 20px;
+  
+}
+
+
+
+footer {
+
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+.section {
+  max-width: 66%;
+  float: left;
+  margin-right: 12px;
+  margin-left: 15px;
+}
+
+
+
+
+.sidebar {
+  max-width: 30%; 
+  float: right;
+  margin-right: 15px;
+}
+
+
+.block {
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-top: 50px;
+  margin-bottom: 15px;
+  
+}
+
+
+
+.friend #friend-image {
+  
+  display: flex;
+  object-fit: cover;
+  height: 85px;
+  width: 85px;
+ 
+ 
+}
+
+
+.friend img{
+ 
+  margin-right: 20px;
+  float:left;
+  
+  
+ }
+
+
+
+        
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+}
+
+
+
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+ 
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 600px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+  .section {
+    max-width: 100%;
+  }
+  .sidebar {
+    max-width: 100%;
+  }
+}
