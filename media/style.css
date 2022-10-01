@@ -73,21 +73,26 @@ footer {
   
 }
 
+.small:hover {
+  background-color: #ddd;
+  color: black;
+}
 
-
-.friend #friend-image {
+.blog:hover {
+  background-color: #ddd;
+  color: black;
   
-  display: flex;
-  object-fit: cover;
-  height: 85px;
-  width: 85px;
- 
- 
 }
 
 
-.friend img{
- 
+
+.blog {
+  padding: 1px;
+  height: 90px;
+}
+
+.blog img {
+  
   margin-right: 20px;
   float:left;
   
@@ -95,6 +100,49 @@ footer {
  }
 
 
+ .blog #blog-image {
+  
+  display: flex;
+  object-fit: cover;
+  
+  height: 85px;
+  width: 85px;
+  
+ 
+ 
+}
+
+.small {
+  height: 120px;
+}
+
+.small img {
+  
+  margin-right: 20px;
+  float:left;
+  
+  
+ }
+
+
+ .small #small-image {
+  
+  display: flex;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  margin: 10px;
+ 
+ 
+}
+
+
+.social {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 
         
  ul {

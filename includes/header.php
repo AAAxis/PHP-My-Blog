@@ -20,7 +20,7 @@ require "includes/config.php";
         foreach( $categories as $cat )
         {
             ?>
-            <li><a href="/details.php?id=<?php echo $cat['id']; ?>"><?php 
+            <li><a href="/categorie.php?id=<?php echo $cat['id']; ?>"><?php 
             echo $cat['title']; ?></a></li>
             <?php
         }

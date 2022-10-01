@@ -11,14 +11,20 @@
         <?php include "includes/header.php"; ?>
 
         <?php
-        $articles = mysqli_query($connection, "SELECT * FROM `articles` ORDER BY `pubdate` DESC LIMIT 4");
-        ?>
+        $articles = mysqli_query($connection, "SELECT * FROM `articles` WHERE `categorie` =". (int) $_GET['id']);
+
+      
+       ?>
 
         <div class="section">
 
           <?php
-          while( $art = mysqli_fetch_assoc($articles) )
-          {
+            while( $art = mysqli_fetch_assoc($articles) )
+            {
+        
+           mysqli_query($connection, "UPDATE `articles` SET `views` + 1 WHERE `id` = " . (int) $art['id']);
+          
+            
           ?>
 
           <div  class="block" >
@@ -29,7 +35,7 @@
               <img src="../static/images/<?php echo $art['image']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></a></div><br>
               <p><?php echo $art['text']; ?></p>
 
-            <?php
+              <?php
               $art_cat = false;
               foreach( $categories as $cat )
               {
@@ -41,22 +47,20 @@
               }
             ?>
             <small>Categorie: <a href="/categorie.php?id=<?php echo $art_cat['id'];?>"><?php echo $art_cat['title']; ?></a></small>
-            <small style="float:right;">Views: <?php echo $art['views']; ?></small><br>
+       
+          <small style="float:right;">Views: <?php echo $art['views']; ?></small><br>
         
       
         </div>
-         
+      
         <?php
           }
             ?>
-              <small style="text-decoration: none; color: black; display: block; margin: 10px;"> <a href="/showall.php">Show All</a></small>
-              <br>
-              
         </div> 
-        
-          <?php include "includes/sidebar.php"; ?>
+        <?php include "includes/sidebar.php"; ?>
+  
 
-    
+     
 
   </body>
 </html>
