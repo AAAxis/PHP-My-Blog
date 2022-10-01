@@ -7,10 +7,10 @@ $config = array(
     'facebook' => 'https://www.facebook.com/polskoydm',
     'github' => 'https://github.com/AAAxis/',
     'db' => array(
-    'server' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'name' => 'test_blog' )
+    'server' => 'sql104.epizy.com',
+    'username' => '	sql104.epizy.com',
+    'password' => 'NYxCJshfrdb',
+    'name' => 'epiz_32704195_test_blog' )
 );
 
 require "db.php";
