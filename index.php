@@ -9,7 +9,7 @@
   <body>
 
         <?php include "includes/header.php"; ?>
-
+        <main>
         <?php
         $articles = mysqli_query($connection, "SELECT * FROM `articles` ORDER BY `pubdate` DESC LIMIT 4");
         ?>
@@ -49,14 +49,16 @@
         <?php
           }
             ?>
-              <small style="text-decoration: none; color: black; display: block; margin: 10px;"> <a href="/showall.php">Show All</a></small>
+              <small style="text-decoration: none; display: block; margin: 10px; color:black;"> <a href="/showall.php">Show All</a></small>
               <br>
               
+              
+          
         </div> 
-        
-          <?php include "includes/sidebar.php"; ?>
+        </main>
 
-    
-
+    <?php include "includes/sidebar.php"; ?>
+    <?php include "includes/footer.php"; ?>
   </body>
+
 </html>

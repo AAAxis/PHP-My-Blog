@@ -16,14 +16,14 @@ body {
 input {
   
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 5px;
+  margin: 7px;
   box-sizing: border-box;
 }
 
 /* Fake image */
 .fakepost {
-  background-color: rgba(224, 120, 120, 0.705);
+  background-color: rgba(255, 188, 166, 0.685);
   width: 100%;
   padding: 20px;
 }
@@ -212,4 +212,13 @@ li {
   .sidebar {
     max-width: 100%;
   }
+}
+
+
+footer {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+ 
 }

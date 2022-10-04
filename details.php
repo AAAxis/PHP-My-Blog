@@ -85,7 +85,7 @@
            
 
          <div class="block" id="comment-form">
-         <h3>Leave a Message</h3>
+         <h3>Leave a Comment</h3>
       
             <form action="#comment-form" method="POST" >
             
@@ -134,6 +134,6 @@
             
             </form>
         </div>
-
+        <?php include "includes/footer.php"; ?>
   </body>
 </html>
