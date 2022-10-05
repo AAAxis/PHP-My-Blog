@@ -19,19 +19,19 @@ require "includes/config.php";
        foreach( $categories as $cat )
        {
            ?>
-           <li><a href="/categorie.php?id=<?php echo $cat['id']; ?>"><?php 
+           <li><a href="../categorie.php?id=<?php echo $cat['id']; ?>"><?php 
            echo $cat['title']; ?></a></li>
            <?php
        }
        ?>
    
         <?php if(isset($_COOKIE['admin']) == 'true') :?>
-            <li><a href="#">Settings</a>
-            <li><a href="/pages/auth.php">Log Out</a>
+            <li><a href="/includes/posts.php">Dashboard</a>
+            <li><a href="../actions/auth.php">Log Out</a>
             
         <?php else : ?>
         
-        <form style="float: right;" action="/pages/login.php" method="POST" >
+        <form style="float: right;" action="../actions/login.php" method="POST" >
         
 
 

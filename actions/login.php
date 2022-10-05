@@ -3,8 +3,8 @@ $user = $_POST['user'];
 $pass = $_POST['password'];
 $error = '';
 
-if (($pass) == 'admin')
-header('Location: /pages/auth.php');
+if (($pass) ==  'admin')
+header('Location: ../actions/auth.php');
 else if(trim($pass) == '')
     $error = 'Password null';
 else if(trim($user) == '')

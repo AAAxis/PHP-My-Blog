@@ -1,8 +1,9 @@
 <?php
 
 $config = array(
+
     'title' => 'ITBLOG',
-    'owner' => 'Dmitry Polskoy',
+    'owner' => 'Dima',
     'linkedin' => 'https://www.linkedin.com/in/dmitry-polskoy-a46103177/',
     'facebook' => 'https://www.facebook.com/polskoydm',
     'github' => 'https://github.com/AAAxis/',
@@ -13,4 +14,18 @@ $config = array(
     'name' => 'test_blog' )
 );
 
-require "db.php";
+
+$connection = mysqli_connect(
+    $config['db']['server'],
+    $config['db']['username'],
+    $config['db']['password'],
+    $config['db']['name']
+);
+
+if($connection == false )
+{
+    echo "Connection Error!<br>";
+    echo mysqli_connect_error();
+    exit();
+}
+

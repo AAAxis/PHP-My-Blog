@@ -22,8 +22,7 @@
             while( $art = mysqli_fetch_assoc($articles) )
             {
         
-           mysqli_query($connection, "UPDATE `articles` SET `views` + 1 WHERE `id` = " . (int) $art['id']);
-          
+       
             
           ?>
 
@@ -32,8 +31,8 @@
               <p>Posted <?php echo mb_substr ($art['pubdate'], 0, 11, 'utf-8'); ?></p>
               <div class="fakepost" style="height:200px;">
               <a href="/details.php?id=<?php echo $art['id']; ?>">
-              <img src="../static/images/<?php echo $art['image']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></a></div><br>
-              <p><?php echo $art['text']; ?></p>
+              <img src="../static/images/<?php echo $art['file']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></a></div><br>
+              <p><?php echo $art['post']; ?></p>
 
               <?php
               $art_cat = false;

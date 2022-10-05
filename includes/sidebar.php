@@ -22,7 +22,7 @@ require "includes/config.php";
       
             <div class="blog">
             <a href="./details.php?id=<?php echo $art['id']; ?>">
-                <img id ='blog-image' src='../static/images/<?php echo $art['image']; ?>'></a>
+                <img id ='blog-image' src='../static/images/<?php echo $art['file']; ?>'></a>
            
             <div id="blog-bio">
               <h5><?php echo $art['title']; ?></h5></div>
