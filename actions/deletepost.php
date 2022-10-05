@@ -1,6 +1,6 @@
 <?php
     
-    require "../includes/config.php";
+    require "../actions/config.php";
 
 if( isset($_POST['delete'])) {
     $post_id = $_POST['delete'];

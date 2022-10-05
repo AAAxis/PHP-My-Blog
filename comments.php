@@ -1,6 +1,7 @@
-<?php include "../admin.php"; ?>
+<body>
+        <?php include "actions/sidebar.php"; ?>
 
-<div style="margin-left: 22%;" class="main">
+
 <div class="block" > 
 
         <h3>Comments</h3>
@@ -58,7 +59,8 @@
             </form>
         </div>
 
-        
+        <script src="static/script.js"></script>
+
   </body>
 </html>
 

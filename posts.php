@@ -1,5 +1,7 @@
-<?php include "../admin.php";?>
-<div style="margin-left: 22%;" class="main">
+<body>
+  <?php include "actions/sidebar.php"; ?>
+        
+
 <?php
         
         $categories = mysqli_query($connection, "SELECT * FROM `articles_categories`");
@@ -78,6 +80,7 @@
         </div>
 
 
-        
+        <script src="static/script.js"></script>
+
   </body>
 </html>

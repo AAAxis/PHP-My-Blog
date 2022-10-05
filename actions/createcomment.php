@@ -1,6 +1,6 @@
  
             <?php 
-            require "../includes/config.php";
+            require "../actions/config.php";
 
 if( isset($_POST['submit']) )
 {

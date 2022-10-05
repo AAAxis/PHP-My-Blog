@@ -8,10 +8,10 @@ $config = array(
     'facebook' => 'https://www.facebook.com/polskoydm',
     'github' => 'https://github.com/AAAxis/',
     'db' => array(
-    'server' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'name' => 'test_blog' )
+    'server' => 'sql202.ezyro.com',
+    'username' => 'ezyro_32731389',
+    'password' => 'fyhfc4mmsujz',
+    'name' => 'ezyro_32731389_test_blog' )
 );
 
 

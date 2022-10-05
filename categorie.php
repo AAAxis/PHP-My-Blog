@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <?php require "includes/config.php";?>
-      <link rel="stylesheet" href="./media/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title><?php echo $config['title']; ?></title>
-    </head>
-  <body>
-
-        <?php include "includes/header.php"; ?>
+<body>
+        <?php include "actions/sidebar.php"; ?>
 
         <?php
         $articles = mysqli_query($connection, "SELECT * FROM `articles` WHERE `categorie` =". (int) $_GET['id']);
@@ -56,8 +47,8 @@
           }
             ?>
         </div> 
-        <?php include "includes/sidebar.php"; ?>
-        <?php include "includes/footer.php"; ?>
+        
+        <script src="static/script.js"></script>
 
      
 

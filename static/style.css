@@ -63,21 +63,10 @@ footer {
 }
 
 
-.section {
-  max-width: 66%;
-  float: left;
-  margin-right: 12px;
-  margin-left: 15px;
-}
 
 
 
 
-.sidebar {
-  max-width: 30%; 
-  float: right;
-  margin-right: 15px;
-}
 
 
 .block {
@@ -115,6 +104,7 @@ footer {
   
  }
 
+ 
 
  .blog #blog-image {
   
@@ -233,9 +223,11 @@ li {
 
 
 footer {
-  float: left;
-  width: 100%;
+  float: right;
+  width: 80%;
   text-align: center;
-  padding: 3px;
- 
 }
+
+
+
+
