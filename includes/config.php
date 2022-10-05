@@ -3,7 +3,7 @@
 $config = array(
 
     'title' => 'ITBLOG',
-    'owner' => 'Dima',
+    'owner' => 'Dima Polskoy',
     'linkedin' => 'https://www.linkedin.com/in/dmitry-polskoy-a46103177/',
     'facebook' => 'https://www.facebook.com/polskoydm',
     'github' => 'https://github.com/AAAxis/',

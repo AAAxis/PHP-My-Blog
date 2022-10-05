@@ -16,7 +16,7 @@
 <img style ="height:120px; margin:20px;" id ='image' src='/media/profile.jpg'>
 </div>
   <h3 class="w3-padding-20 w3-center"><b>Hello, <?php echo $config['owner']; ?></b></h3>
-   <a href="/pages/auth.php" onclick="w3_close()" class="w3-bar-item w3-button">Log Out</a> 
+   <a href="/actions/cookie.php" onclick="w3_close()" class="w3-bar-item w3-button">Log Out</a> 
    <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> 
    <a href="/includes/comments.php" onclick="w3_close()" class="w3-bar-item w3-button">Edit Comments</a> 
   <a href="/includes/posts.php" onclick="w3_close()" class="w3-bar-item w3-button">Edit Posts</a>

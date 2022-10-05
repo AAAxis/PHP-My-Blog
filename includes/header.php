@@ -27,7 +27,7 @@ require "includes/config.php";
    
         <?php if(isset($_COOKIE['admin']) == 'true') :?>
             <li><a href="/includes/posts.php">Dashboard</a>
-            <li><a href="../actions/auth.php">Log Out</a>
+            <li><a href="../actions/cookie.php">Log Out</a>
             
         <?php else : ?>
         
@@ -36,7 +36,7 @@ require "includes/config.php";
 
 
            
-            <input style= "width:200px;" type="user" name="user" placeholder="Email"  >
+            <input style= "width:200px;" type="email" name="user" placeholder="Email" required >
             <input style= "width:200px;" type="password" name="password" placeholder="Password" >
             <input style= "width:80px;" name="submit" type="submit" value="Log In">
             
