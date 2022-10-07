@@ -39,7 +39,7 @@ input {
 
 /* Fake image */
 .fakepost {
-  background-color: rgba(255, 188, 166, 0.685);
+  background-color: #155660cc;
   width: 100%;
   padding: 20px;
 }
@@ -49,6 +49,7 @@ input {
   background-color: #ddd;
   width: 100%;
   padding: 20px;
+  
   
 }
 
@@ -103,6 +104,7 @@ footer {
   
   
  }
+
 
  
 

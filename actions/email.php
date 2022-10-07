@@ -1,25 +1,17 @@
 <?php
+    
+    require "config.php";
 
-$email = $_POST['email'];
-$message = $_POST['text'];
+if( isset($_POST['submit'])) {
+    $email = $_POST['email'];
+            
+            $subscriptions = mysqli_query($connection, "INSERT INTO `subscribe` (`email`) VALUE ('".$_POST['email']."')");
+            echo "INSERT INTO `subscribe` (`email`) VALUE ('".$_POST['email']."')";
 
-$error = '';
-if(trim($email) == '')
-    $error = 'Email null';
-else if(trim($message) == '')
-    $error = 'Message null';
-else if(strlen($message) < 10)
-    $error = 'Message a short';
+            
 
-if($error != '') {
-    echo $error;
-    exit;
-}
+            } else {
+                echo 'Error';
+            }
+            ?>
 
-
-$subject = "=?utf-8?B?".("Test Message")."?=";
-$headers = "From: $email\r\nReply-to: $email\r\nContent-type: text/html;charset=utf-8\r\n";
-
-mail('polskoydm@gmail.com', $subject, $message, $headers);
-header('Location: /');
-?>

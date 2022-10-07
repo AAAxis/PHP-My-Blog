@@ -11,12 +11,12 @@
   <body>
 
 
-<?php $categories = mysqli_query($connection, "SELECT * FROM `articles_categories`");?>
+<?php $categories = mysqli_query($connection, "SELECT * FROM `categories`");?>
   
 
   <!-- Top menu on small screens -->
 <header  class="w3-container  w3-white w3-xlarge w3-padding-16">
-  <span class="w3-right w3-padding"><?php echo $config['title']; ?></span>
+  <a href="/" class="w3-right w3-padding"><?php echo $config['title']; ?></a>
   <a href="javascript:void(0)" class="w3-left w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
 
@@ -27,10 +27,10 @@
             <h3 class="w3-padding-20 w3-center"><b>Hello, <?php echo $config['owner']; ?></b></h3>
             <a  onclick="w3_close()" href="#"><img src="/static/profile.jpg" style="height:100px" alt="Profile" ></a><br>
     
-           
-            <a href="../actions/cookie.php" onclick="w3_close()" class="w3-bar-item w3-button">Log Out</a>
+                   <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> 
+            <a href="../actions/logout.php" onclick="w3_close()" class="w3-bar-item w3-button">Log Out</a>
             <a href="./comments.php" onclick="w3_close()" class="w3-bar-item w3-button">Comments</a>
-        <a href="../posts.php" onclick="w3_close()" class="w3-bar-item w3-button">Posts</a>
+        <a href="./dashboard.php" onclick="w3_close()" class="w3-bar-item w3-button">Posts</a>
        
            
         <?php else : ?>
@@ -50,9 +50,10 @@
             
             </form>
         <?php endif; ?>
+
         <hr>
    
-        <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> 
+
         <?php
        foreach( $categories as $cat )
        {
@@ -71,6 +72,6 @@
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
    <!-- !PAGE CONTENT! -->
-   <div class="w3-main" style="margin-left:310px">
+   <div class="w3-main" style="margin-left:310px; margin-top:10px;">
  
  

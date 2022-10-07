@@ -6,5 +6,5 @@
     else
         setcookie('admin', 'true', time() + 3600, '/');
 
-    header('Location: ../dashboard.php');
+    header('Location: /');
 ?>

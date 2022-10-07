@@ -22,7 +22,7 @@
               <p>Posted <?php echo mb_substr ($art['pubdate'], 0, 11, 'utf-8'); ?></p>
               <div class="fakepost" style="height:200px;">
               <a href="/details.php?id=<?php echo $art['id']; ?>">
-              <img src="../static/images/<?php echo $art['file']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></a></div><br>
+              <img src="../static/images/<?php echo $art['file']; ?>" style="display: flex; object-fit: cover; height: 195px; width: 300px;" alt="<?php echo $art['title']; ?>" ></a></div><br>
               <p><?php echo $art['post']; ?></p>
 
               <?php

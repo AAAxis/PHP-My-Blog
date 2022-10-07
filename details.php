@@ -21,8 +21,8 @@
               <p>Posted <?php echo mb_substr ($art['pubdate'], 0, 11, 'utf-8'); ?></p>
               <div class="fakepost" style="height:200px;">
           
-              <img src="../static/images/<?php echo $art['file']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></div><br>
-              <p><?php echo $art['post']; ?></p>
+              <img src="../static/images/<?php echo $art['file']; ?>" style="display: flex; object-fit: cover; height: 195px; width: 300px;" alt="<?php echo $art['title']; ?>" ></div><br>
+              <p><?php echo $art['text']; ?></p>
 
               <?php
               $art_cat = false;
@@ -58,7 +58,7 @@
           ?>
           <div class="small">
           <hr>
-          <img id ='small-image' src='/media/download.png'>
+          <img id ='small-image' src='/static/download.png'>
           <div id="small-bio">
           
           <h4><?php echo $com['name']; ?></h4>
@@ -75,10 +75,10 @@
          </div>
            
 
-         <div class="block" id="comment-form">
+         <div class="block">
          <h3>Leave a Comment</h3>
       
-            <form action="#comment-form" method="POST" >
+            <form action="" method="POST" >
             
             <?php 
 
@@ -104,7 +104,11 @@
               {
                 //ADD COMMENT
                 mysqli_query($connection, "INSERT INTO `comments` (`name`, `email`, `text`) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['text']."')");
-                echo '<span style="color: green; font-weight: bold; margin-bottom: 10px; display: block;">Comment Added!</span>';
+             
+                    $secondsWait = 1;
+                    echo date('Y-m-d H:i:s');
+                    echo '<meta http-equiv="refresh" content="'.$secondsWait.'">';
+                    exit();
              
               } 
 
@@ -116,16 +120,17 @@
             }
             ?>
             <input type="text" name="name" placeholder="Your Name"  >
-            <br>
+            <br><br>
             <input type="email" name="email" placeholder="Your Email"  >
-            <br>
+            <br><br>
             <input type="text" name="text" placeholder="Write a message..." >
-            <br>
+            <br><br>
             <input name="submit" type="submit" value="Send">
             
             </form>
         </div>
-        
+
+
         <script src="static/script.js"></script>
   </body>
 </html>

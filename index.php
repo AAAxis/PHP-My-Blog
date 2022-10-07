@@ -18,7 +18,7 @@
               <p>Posted <?php echo mb_substr ($art['pubdate'], 0, 11, 'utf-8'); ?></p>
               <div class="fakepost" style="height:200px;">
               <a href="/details.php?id=<?php echo $art['id']; ?>">
-              <img src="../static/images/<?php echo $art['file']; ?>" style="height:200px" alt="<?php echo $art['title']; ?>" ></a></div><br>
+              <img src="../static/images/<?php echo $art['file']; ?>" style="display: flex; object-fit: cover; height: 195px; width: 300px;" alt="<?php echo $art['title']; ?>" ></a></div><br>
               <p><?php echo $art['post']; ?></p>
 
             <?php
@@ -60,9 +60,9 @@
                 <img id ='blog-image' src='../static/images/<?php echo $art['file']; ?>'></a>
            
             <div id="blog-bio">
-              <h5><?php echo $art['title']; ?></h5></div>
+              <h5><?php echo mb_substr ($art['title'], 0, 75, 'utf-8'); ?>...</h5></div>
            
-              <small>Views <?php echo $art['views']; ?></small><br>
+            
               </div> 
               <br>
          <?php
@@ -80,20 +80,19 @@
       <div class="block">
       <h2>About Me</h2>
       <div class="fakeimg" style="height:100px;">
-      <a href="#"><img src="/media/profile.jpg" style="height:100px" alt="Profile" ></a>
+      <a href="#"><img src="/static/profile.jpg" style="height:100px" alt="Profile" ></a>
       </div><br>
       <h4><?php echo $config['owner'];?></h4>
       <p>Entery level Full Stack Web Developer, learning PHP, Python, Java Script, MySql. I have couples of Hobby like Skateboarding, Video Editing and Bartending. Live in Tel-Aviv. Open for Web Projects and cooperations.</p>
       
 
-      <form action="check.php" method="POST" >
-        <h4>Contact Me</h4>
+      <form action="./actions/email.php" method="POST" >
+        <h4>Subscribe</h4>
+            
 
             <input type="email" name="email" placeholder="Your Email"  >
-            <br>
-            <input type="text" name="text" placeholder="Write a message..." >
-            <br>
-            <input name="submit" type="submit" value="Send">
+            <br> <br>
+            <button type="submit" name="submit">Send</button>
             
             </form>
 
